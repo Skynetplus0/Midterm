@@ -1,0 +1,6 @@
+@StayBooking.AdminApi_HostAddress = http://localhost:5285
+
+GET {{StayBooking.AdminApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

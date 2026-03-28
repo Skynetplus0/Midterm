@@ -1,0 +1,122 @@
+C:\Users\Administrator\Desktop\Midterm\load-tests>k6 run --insecure-skip-tls-verify query-listings.js
+
+         /\      Grafana   /‾‾/
+    /\  /  \     |\  __   /  /
+   /  \/    \    | |/ /  /   ‾‾\
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/
+
+
+     execution: local
+        script: query-listings.js
+        output: -
+
+     scenarios: (100.00%) 3 scenarios, 150 max VUs, 2m10s max duration (incl. graceful stop):
+              * normal_load: 20 looping VUs for 30s (gracefulStop: 30s)
+              * peak_load: 50 looping VUs for 30s (startTime: 35s, gracefulStop: 30s)
+              * stress_load: 100 looping VUs for 30s (startTime: 1m10s, gracefulStop: 30s)
+
+
+
+  █ THRESHOLDS
+
+    http_req_duration
+    ✓ 'p(95)<2000' p(95)=822.79ms
+
+    http_req_failed
+    ✓ 'rate<0.10' rate=0.00%
+
+
+  █ TOTAL RESULTS
+
+    checks_total.......: 3988    39.408576/s
+    checks_succeeded...: 100.00% 3988 out of 3988
+    checks_failed......: 0.00%   0 out of 3988
+
+    ✓ query status is 200
+
+    HTTP
+    http_req_duration..............: avg=289.24ms min=15.98ms med=195.87ms max=1.43s p(90)=698.59ms p(95)=822.79ms
+      { expected_response:true }...: avg=289.24ms min=15.98ms med=195.87ms max=1.43s p(90)=698.59ms p(95)=822.79ms
+    http_req_failed................: 0.00%  0 out of 3988
+    http_reqs......................: 3988   39.408576/s
+
+    EXECUTION
+    iteration_duration.............: avg=1.3s     min=1.01s   med=1.19s    max=3.02s p(90)=1.71s    p(95)=1.82s
+    iterations.....................: 3988   39.408576/s
+    vus............................: 30     min=0         max=100
+    vus_max........................: 150    min=150       max=150
+
+    NETWORK
+    data_received..................: 885 kB 8.7 kB/s
+    data_sent......................: 569 kB 5.6 kB/s
+
+
+
+
+running (1m41.2s), 000/150 VUs, 3988 complete and 0 interrupted iterations
+normal_load ✓ [======================================] 20 VUs   30s
+peak_load   ✓ [======================================] 50 VUs   30s
+stress_load ✓ [======================================] 100 VUs  30s
+
+C:\Users\Administrator\Desktop\Midterm\load-tests>k6 run --insecure-skip-tls-verify book-stay.js
+
+         /\      Grafana   /‾‾/
+    /\  /  \     |\  __   /  /
+   /  \/    \    | |/ /  /   ‾‾\
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/
+
+
+     execution: local
+        script: book-stay.js
+        output: -
+
+     scenarios: (100.00%) 3 scenarios, 150 max VUs, 2m10s max duration (incl. graceful stop):
+              * normal_load: 20 looping VUs for 30s (gracefulStop: 30s)
+              * peak_load: 50 looping VUs for 30s (startTime: 35s, gracefulStop: 30s)
+              * stress_load: 100 looping VUs for 30s (startTime: 1m10s, gracefulStop: 30s)
+
+
+
+  █ THRESHOLDS
+
+    http_req_duration
+    ✓ 'p(95)<2000' p(95)=49.62ms
+
+    http_req_failed
+    ✗ 'rate<0.20' rate=100.00%
+
+
+  █ TOTAL RESULTS
+
+    checks_total.......: 5051    50.074858/s
+    checks_succeeded...: 0.00%   0 out of 5051
+    checks_failed......: 100.00% 5051 out of 5051
+
+    ✗ booking status is 200 or 400
+      ↳  0% — ✓ 0 / ✗ 5051
+
+    HTTP
+    http_req_duration....: avg=15.11ms min=0s med=6.63ms max=92.56ms p(90)=43.62ms p(95)=49.62ms
+    http_req_failed......: 100.00% 5051 out of 5051
+    http_reqs............: 5051    50.074858/s
+
+    EXECUTION
+    iteration_duration...: avg=1.01s   min=1s med=1s     max=1.21s   p(90)=1.04s   p(95)=1.05s
+    iterations...........: 5051    50.074858/s
+    vus..................: 100     min=0            max=100
+    vus_max..............: 150     min=150          max=150
+
+    NETWORK
+    data_received........: 597 kB  5.9 kB/s
+    data_sent............: 1.2 MB  12 kB/s
+
+
+
+
+running (1m40.9s), 000/150 VUs, 5051 complete and 0 interrupted iterations
+normal_load ✓ [======================================] 20 VUs   30s
+peak_load   ✓ [======================================] 50 VUs   30s
+stress_load ✓ [======================================] 100 VUs  30s
+ERRO[0101] thresholds on metrics 'http_req_failed' have been crossed
