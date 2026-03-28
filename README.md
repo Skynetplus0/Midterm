@@ -339,13 +339,8 @@ Some implementation and deployment issues encountered during development:
 
 ## Video Demo
 
-Add your video link here:
+https://youtu.be/sEVK9SP7Rqc
 
-`PASTE_YOUR_VIDEO_LINK_HERE`
-
-Example:
-- YouTube link
-- Google Drive share link
 
 ---
 
