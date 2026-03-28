@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StayBooking.AdminApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47940127b0c5dfc249d8d2cf933cc572562e9c3c")]
 [assembly: System.Reflection.AssemblyProductAttribute("StayBooking.AdminApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StayBooking.AdminApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
