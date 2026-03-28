@@ -348,21 +348,8 @@ https://youtu.be/sEVK9SP7Rqc
 
 ---
 
-## Deliverables Checklist
-
-- [x] GitHub repository
-- [x] Main API Swagger URL
-- [x] Gateway Swagger URL
-- [x] Project design documented
-- [x] Assumptions documented
-- [x] Data model summarized
-- [x] Load test scripts prepared
-- [x] Load test results recorded
-- [x] Load test screenshots added
-- [x] Video demo link added
 
 
----
 
 
-This repository contains both the implementation and the load testing artifacts required for the midterm project.
+
